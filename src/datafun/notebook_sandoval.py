@@ -194,7 +194,7 @@ def _(mo):
     [Project Source](https://github.com/sandoval9713/datafun-04-eda/blob/main/src/datafun/notebook.py)
     | [Project Docs](https://sandoval9713.github.io/datafun-04-eda/)
     """)
-    return
+
 
 
 # ===  CONTROL: CHOOSE THE DISTRIBUTION VARIABLE ===
@@ -217,7 +217,7 @@ def _choose_first_column(mo, NUMERIC_COLUMNS):
     )
 
     # display
-    numeric_column
+    numeric_column # noqa:B018
 
     return (numeric_column,)
 
@@ -241,7 +241,7 @@ def _show_distribution(df, numeric_column, show_numeric_distribution):
     distribution_ax.set_title(f"Distribution of {numeric_column.value}")
 
     # display
-    distribution_ax
+    return distribution_ax
 
 
 # ===  CONTROL: CHOOSE THE X AND Y VARIABLES ===
@@ -302,7 +302,7 @@ def _show_relationship(df, show_numeric_relationship, x_column, y_column):
     relationship_ax.set_title(f"{y_column.value} by {x_column.value}")
 
     # display it
-    relationship_ax
+    return relationship_ax
 
 
 # ===  TYPICALLY END WITH A MARKDOWN SOURCE LINK AND CLOSING ===
