@@ -196,7 +196,6 @@ def _(mo):
     """)
 
 
-
 # ===  CONTROL: CHOOSE THE DISTRIBUTION VARIABLE ===
 
 
@@ -217,7 +216,7 @@ def _choose_first_column(mo, NUMERIC_COLUMNS):
     )
 
     # display
-    numeric_column # noqa:B018
+    numeric_column  # noqa:B018
 
     return (numeric_column,)
 
