@@ -1,4 +1,4 @@
-# Data Card: Iris 
+# Data Card: Iris
 
 This Data Card documents the dataset used for Iris exploratory data analysis project.
 It follows the general transparency goals of Google's Data Cards Playbook:
@@ -14,7 +14,7 @@ Describe dataset provenance, composition, intended use, limitations, and conside
 | Species | Setosa, Versicolor, Virginica |
 | Measurements | sepal length, sepal width, petal length, petal width |
 | Unit | centimeters |
-| Grain | one flower 
+| Grain | one flower
 
 This Data Card documents the dataset used by the
 Iris exploratory data analysis project.
@@ -32,14 +32,14 @@ not apparent from the data.
 
 | Dataset | Iris |
 | Curated dataset | iris |
-| Observation |150 flowers 
+| Observation |150 flowers
 |
 | Species | Setosa,
 Versicolor, Virginica |
 | Measurements | sepal length, Sepal Width, petal legth, petal width |
 | Unit | centimeter |
 | Grain | one flower |
-| Primary use here | exploratory data analysis | 
+| Primary use here | exploratory data analysis |
 
 ## Purpose
 
@@ -83,7 +83,7 @@ The dataset is appropriate for:
 - supervised machine-learning experiments
 - demonstrating reproducible analytical workflows
 
-In this repository, the dataset is used to demonstrate exploratory data analysis with interactive distributions and relationships between numeric variables. 
+In this repository, the dataset is used to demonstrate exploratory data analysis with interactive distributions and relationships between numeric variables.
 
 
 ## Additional Exploration
@@ -142,8 +142,8 @@ The project:
 1. loads the Iris dataset
 2. observes the available columns
 3. validates the selected variables
-4. selects numeric flower measurements 
-5. explores distributions 
+4. selects numeric flower measurements
+5. explores distributions
 6. compares relationships between selected variables
 
 ## References

@@ -12,26 +12,26 @@
 
 > Exploratory data analysis project using the Iris dataset
 > This project uses Python and Marimo to explore distributions and relationships between flower measurements.
-## Project Overview 
+## Project Overview
 
 This project explores the Iris dataset using Python and reactive exploratory data analysis.
 
-The analysis focuses on: 
+The analysis focuses on:
 -sepal length
--sepal width 
+-sepal width
 -petal length
--petal width 
+-petal width
 
 The interactive notebook allows users to select variables and view updated charts automatically.
 
-## How to Set Up the project 
+## How to Set Up the project
 
 1. Clone or download this repository.
 2. Open the project folder in VS Code.
 3. Open a terminal in the project root.
 4. Run:
 
-'''bash 
+'''bash
 uv sync
 
 

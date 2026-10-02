@@ -1,19 +1,19 @@
 # Project Documentation
 
-# Iris Exploratory Data Analysis 
-This project explores the Iris dataset using Python and reactive data analysis tools. 
+# Iris Exploratory Data Analysis
+This project explores the Iris dataset using Python and reactive data analysis tools.
 
-## Project Overview 
+## Project Overview
 This project applies exploratory data analysis techniques to the Iris dataset.
 
 The analysis focuses on four numeric variables :
 
--sepal_length 
+-sepal_length
 -sepal_width
 -petal-length
 -petal_width
 
-## Analysis 
+## Analysis
 
 The Project includes:
 
