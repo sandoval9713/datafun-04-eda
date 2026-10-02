@@ -13,7 +13,7 @@
 
 [project]
 name = "datafun-04-eda"
-description = "Exploratory data analysis project using Python and the Palmer Penguins dataset."
+description = "Exploratory data analysis project using Python and the Iris dataset."
 # CUSTOM: Package distribution name (use lowercase and dashes).
 readme = "README.md"
 requires-python = ">=3.14"

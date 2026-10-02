@@ -1,21 +1,34 @@
 # Project Documentation
 
-> Use this hosted documentation site to tell your
-> data story. Include a narrative telling your
-> results, observations, and interpretations.
-> Display visuals as needed for a compelling story.
+# Iris Exploratory Data Analysis 
+This project explores the Iris dataset using Python and reactive data analysis tools. 
 
-## Professional Workflow
+## Project Overview 
+This project applies exploratory data analysis techniques to the Iris dataset.
 
-See [**Workflow B: Apply Example Project**](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
-to get a project like this running on your machine.
+The analysis focuses on four numeric variables :
 
-## Professional Projects
+-sepal_length 
+-sepal_width
+-petal-length
+-petal_width
 
-- We code like the pros to help us **focus on the analytics**.
-- Most files in this repository will never be touched.
-- If curious about a file, check out the
-  [Professional Python Project Explainer](https://denisecase.github.io/professional-python-project-explainer/).
+## Analysis 
+
+The Project includes:
+
+- a distribution chart for a selected numeric variable
+
+- interactive X and Y variable selections
+
+- a relationship plot comparing two numeric variables
+
+- reactive updates using Marimo
+
+## Findings
+The Iris dataset shows differences in the distributions of flower measurements.
+The inseractive relationship chart also makes it possible to compare variables such as sepal length and petal length and observe how the measurements vary together.
+
 
 ## Documentation Index
 

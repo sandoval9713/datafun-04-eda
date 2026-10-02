@@ -3,9 +3,9 @@
 Author: Delfina Sandoval
 Date: 2026-08
 
-DOMAIN: Penguins
+DOMAIN: Iris
 
-Explore a dataset of penguins with a small reactive interface, reusing the
+Explore the Iris dataset with a small reactive interface, reusing the
 same EDA utilities (eda_vizkit) and visualization functions as the script
 project.
 
@@ -21,7 +21,7 @@ DEPLOY AS A WASM PAGE IN THE DOCS SITE:
 
   uv run marimo export html-wasm src/datafun/notebook.py \\
       -o docs/notebook --mode run
-  # then place penguins.csv at docs/notebook/public/penguins.csv
+  # then place iris.csv at docs/notebook/public/iris.csv
   # and link docs/notebook/index.html from the docs nav
 
 WASM DEPENDENCIES:
@@ -122,13 +122,13 @@ async def _():
     import marimo as mo
     import pandas as pd
 
-    DATASET_NAME = "penguins"
+    DATASET_NAME = "iris"
 
     NUMERIC_COLUMNS = [
-        "bill_length_mm",
-        "bill_depth_mm",
-        "flipper_length_mm",
-        "body_mass_g",
+        "sepal_length",
+        "sepal_width",
+        "petal_length",
+        "petal_width",
     ]
 
     return (
@@ -186,7 +186,7 @@ def _(mo):
     mo.md(r"""
     # Reactive Exploratory Data Analysis
 
-    Explore the Palmer Penguins dataset interactively.
+    Explore the Iris dataset interactively.
 
     Use the controls below to change the variable being explored.
     Marimo automatically updates dependent results.
@@ -211,7 +211,7 @@ def _choose_first_column(mo, NUMERIC_COLUMNS):
     """
     numeric_column = mo.ui.dropdown(
         options=NUMERIC_COLUMNS,
-        value="flipper_length_mm",
+        value="sepal_length",
         label="Choose a numeric variable",
     )
 
@@ -257,13 +257,13 @@ def _choose_second_column(mo, NUMERIC_COLUMNS):
     """
     x_column = mo.ui.dropdown(
         options=NUMERIC_COLUMNS,
-        value="bill_length_mm",
+        value="sepal_length",
         label="X variable",
     )
 
     y_column = mo.ui.dropdown(
         options=NUMERIC_COLUMNS,
-        value="bill_depth_mm",
+        value="petal_length",
         label="Y variable",
     )
 

@@ -10,19 +10,37 @@
 [![Zensical docs](https://img.shields.io/badge/Zensical-docs-purple)](https://zensical.org/)
 [![MIT](https://img.shields.io/badge/license-see%20LICENSE-yellow.svg)](./LICENSE)
 
-> Professional Python project: exploratory data analysis
-> including marimo and Jupyter notebooks.
+> Exploratory data analysis project using the Iris dataset
+> This project uses Python and Marimo to explore distributions and relationships between flower measurements.
+## Project Overview 
 
-Notebooks combine narration and code.
-This project conducts an EDA using Python and also demonstrates
-two notebook options:
+This project explores the Iris dataset using Python and reactive exploratory data analysis.
 
-- **marimo** - a reactive Python notebook that can run as an interactive app
-- **Jupyter** - a widely used notebook format for interactive data analysis
+The analysis focuses on: 
+-sepal length
+-sepal width 
+-petal length
+-petal width 
 
-Note: With marimo, analysts can build interactive web apps!
-It's a whole new skill set, and not easy, but it does create
-engaging reports that showcase your analytic skills.
+The interactive notebook allows users to select variables and view updated charts automatically.
+
+## How to Set Up the project 
+
+1. Clone or download this repository.
+2. Open the project folder in VS Code.
+3. Open a terminal in the project root.
+4. Run:
+
+'''bash 
+uv sync
+
+
+## How to Run the Project
+
+Run the interactive Marimo notebook with:
+
+'''bash
+uv run marimo run src/datafun/notebook_sandoval.py
 
 ## Motivation
 
@@ -224,7 +242,7 @@ Press `Ctrl c` (both keys together) or `Ctrl+Z` then `Enter` on Windows.
 
 ## Data Card
 
-- [Palmer Penguins Data Card](./docs/data-card.md)
+- [Iris Data Card](./docs/data-card.md)
 
 ## Annotations
 

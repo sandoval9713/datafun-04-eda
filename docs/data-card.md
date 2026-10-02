@@ -1,7 +1,23 @@
-# Data Card: Palmer Penguins
+# Data Card: Iris 
+
+This Data Card documents the dataset used for Iris exploratory data analysis project.
+It follows the general transparency goals of Google's Data Cards Playbook:
+Describe dataset provenance, composition, intended use, limitations, and considerations not apparent from the data.
+
+## Dataset Summary
+
+| Item | Description |
+| --- | --- |
+| Dataset | Iris |
+| Curated dataset | iris |
+| Observations | 150 flowers |
+| Species | Setosa, Versicolor, Virginica |
+| Measurements | sepal length, sepal width, petal length, petal width |
+| Unit | centimeters |
+| Grain | one flower 
 
 This Data Card documents the dataset used by the
-`penguins-body-mass` experiment.
+Iris exploratory data analysis project.
 
 It follows the general transparency goals of Google's
 Data Cards Playbook:
@@ -11,78 +27,50 @@ not apparent from the data.
 
 ## Dataset Summary
 
-| Item                                | Description                    |
-| ----------------------------------- | ------------------------------ |
-| Dataset                             | Palmer Penguins                |
-| Curated dataset                     | `penguins`                     |
-| Observations                        | 344 penguins                   |
-| Species                             | Adelie, Chinstrap, Gentoo      |
-| Location                            | Palmer Archipelago, Antarctica |
-| Islands                             | Biscoe, Dream, Torgersen       |
-| Study period                        | 2007-2009                      |
-| Grain                               | one penguin                    |
-| Primary use here                    | supervised regression          |
-| Target in this experiment           | `body_mass_g`                  |
-| Selected feature in this experiment | `flipper_length_mm`            |
+| Item | Description |
+| --- | --- |
+
+| Dataset | Iris |
+| Curated dataset | iris |
+| Observation |150 flowers 
+|
+| Species | Setosa,
+Versicolor, Virginica |
+| Measurements | sepal length, Sepal Width, petal legth, petal width |
+| Unit | centimeter |
+| Grain | one flower |
+| Primary use here | exploratory data analysis | 
 
 ## Purpose
 
-The Palmer Penguins dataset provides measurements and descriptive
-attributes for penguins observed in the Palmer Archipelago.
+The Iris dataset provides measurements of iris flowers from three species.
 
-The curated dataset was designed as an accessible dataset for
-data exploration and visualization and is commonly used as an
-alternative to the Iris dataset.
+This curated dataset is commonly used for data exploration, visualization, and introductory data analysis because it contains a small set of clear numeric variables.
+
 
 ## Provenance
 
-The underlying observations were collected by Dr. Kristen Gorman
-and the Palmer Station Long Term Ecological Research program.
+The Iris dataset is based on measurements used in R. A. Fisher's classic iris classification study.
 
-The `palmerpenguins` project made curated versions of the data
-readily available for teaching, exploration, and analysis.
-
-This project obtains the dataset through Seaborn's `penguins`
-dataset interface.
+This project uses the Iris dataset obtained through the Seaborn dataset collection and saved locally as `data/raw/iris.csv`.
 
 ## Dataset Composition
 
-The dataset contains 344 observations representing individual penguins.
+The dataset contains 150 observations representing individual iris flowers.
 
-The variables available through the Seaborn version used in this project are:
+The variables used in this project are:
 
+- `sepal_length`
+- `sepal_width`
+- `petal_length`
+- `petal_width`
 - `species`
-- `island`
-- `bill_length_mm`
-- `bill_depth_mm`
-- `flipper_length_mm`
-- `body_mass_g`
-- `sex`
 
-The dataset includes three penguin species:
+The dataset includes three iris species:
 
-- Adelie
-- Chinstrap
-- Gentoo
-
-## Missing Data
-
-Some observations contain missing values.
-
-For this experiment, only two columns are required:
-
-- `flipper_length_mm`
-- `body_mass_g`
-
-Two of the 344 observations are missing one of these required values.
-
-The declared experiment policy drops those observations, leaving:
-
-```text
-342 modeling observations
-```
-
-No values are imputed.
+- Setosa
+- Versicolor
+- Virginica
 
 ## Intended Use
 
@@ -95,84 +83,75 @@ The dataset is appropriate for:
 - supervised machine-learning experiments
 - demonstrating reproducible analytical workflows
 
-In this repository, the dataset is used to demonstrate a clear
-baseline-versus-candidate regression experiment.
+In this repository, the dataset is used to demonstrate exploratory data analysis with interactive distributions and relationships between numeric variables. 
+
 
 ## Additional Exploration
 
+
 Other reasonable analytical questions include:
 
-- predicting penguin species
-- predicting body mass from multiple morphological measurements
-- comparing measurements across species
-- examining differences among islands
-- studying relationships among bill dimensions, flipper length,
-  and body mass
-
-Those are separate analytical experiments and should have their own
-declared assumptions, selected features, evaluation methods, and conclusions.
+- predicting iris species from flower measurements
+- comparing sepal measurements across species
+- comparing petal measurements across species
+- studying relationships between sepal length and sepal width
+- studying relationships between petal length and petal width
 
 ## Limitations
 
-The dataset is small and represents penguins observed in a specific
-geographic region and study period.
+The dataset is small and contains measurements from only three iris species, so results should not automatically be generalized to all flowers or plant species.
 
 Results should therefore not automatically be generalized to:
 
-- all penguin species
-- all geographic populations
-- different ecological conditions
-- future populations
-- other biological species
+- all iris species
+- all flower populations
+- different growing conditions
+- future samples
+- other plant species
 
-Measurements also contain missing values, and some variables may be
-associated with species, sex, island, or other biological structure.
+The Iris dataset is small, and relationships between measurements may differ across species.
 
 A predictive relationship observed in this dataset should not be interpreted
 automatically as a causal relationship.
 
 ## Representation Considerations
 
-The dataset contains observations from three species and three islands,
-and those groups are not necessarily represented equally.
+The dataset contains observations from three iris species.
 
-Model performance calculated across the complete held-out sample may therefore
-hide differences in performance across species, sex, or island.
+Because the dataset is small and includes a limited set of flower measurements, results may not represent all iris populations or other plant species.
 
-A more advanced experiment could evaluate those groups separately.
+Comparisons across species should be interpreted carefully because some measurements may differ naturally by species.
 
 ## Experiment-Specific Use
 
-The feature choice is intentionally constrained.
-This repository uses only:
+This project uses the Iris dataset for exploratory data analysis.
 
-```text
-flipper_length_mm → body_mass_g
-```
+The primary numeric variables are:
 
-The purpose is to determine whether one interpretable morphological feature
-provides useful predictive information beyond a mean-value baseline.
+- `sepal_length`
+- `sepal_width`
+- `petal_length`
+- `petal_width`
+
+The project examines individual distributions and relationships between selected numeric variables.
 
 ## Project Data Processing
 
 The project:
 
-1. loads the Palmer Penguins dataset
+1. loads the Iris dataset
 2. observes the available columns
-3. validates the selected feature and target
-4. selects `flipper_length_mm` and `body_mass_g`
-5. drops observations missing either required value
-6. performs the declared train/test experiment
+3. validates the selected variables
+4. selects numeric flower measurements 
+5. explores distributions 
+6. compares relationships between selected variables
 
 ## References
 
-- [Palmer Penguins project](https://allisonhorst.github.io/palmerpenguins/)
-- [Palmer Penguins data documentation](https://allisonhorst.github.io/palmerpenguins/articles/intro.html)
-- [Data Cards Playbook (toolkit)](https://pair-code.github.io/datacardsplaybook/)
-- Data Cards convention: Pushkarna, Zaldivar, and Kjartansson (2022),
-  _Data Cards:_
-  _Purposeful and Transparent Dataset Documentation for Responsible AI_,
-  ACM FAccT. <https://doi.org/10.1145/3531146.3533231>
+- [Iris Dataset](https://archive.ics.uci.edu/dataset/53/iris)
+- [Seaborn Example Datasets](https://github.com/mwaskom/seaborn-data)
+- [Data Cards Playbook](https://pair-code.github.io/datacardsplaybook/)
+- Data Cards convention: Pushkarna, Zaldivar, and Kjartansson (2022), *Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI*
 
 ---
 
