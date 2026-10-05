@@ -8,10 +8,10 @@ This project applies exploratory data analysis techniques to the Iris dataset.
 
 The analysis focuses on four numeric variables :
 
--sepal_length
--sepal_width
--petal-length
--petal_width
+- sepal_length
+- sepal_width
+- petal-length
+- petal_width
 
 ## Analysis
 
